@@ -8,10 +8,13 @@ class CreateModalBottomSheet {
     return showModalBottomSheet<String>(
       isScrollControlled: true,
       backgroundColor: ColorPalette.getLightGrey(),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(30),
+      ),
       context: context,
       builder: (context) {
         return Container(
-          padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+          padding: EdgeInsets.symmetric(vertical: 40, horizontal: 20),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
@@ -27,12 +30,16 @@ class CreateModalBottomSheet {
                 padding: const EdgeInsets.all(8),
                 child: TextField(
                   controller: _controller,
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.white,
                   ),
+                  autofocus: true,
                   decoration: InputDecoration(
-                      hintText: inputField,
-                      hintStyle: TextStyle(color: Colors.white)),
+                    hintText: inputField,
+                    hintStyle: TextStyle(color: Colors.white),
+                    border: InputBorder.none,
+                  ),
                 ),
               ),
               Padding(
@@ -40,7 +47,10 @@ class CreateModalBottomSheet {
                   bottom: MediaQuery.of(context).viewInsets.bottom,
                 ),
                 child: MaterialButton(
-                  color: Colors.accents.first,
+                  color: ColorPalette.getPrimaryColor(),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(7),
+                  ),
                   onPressed: _controller.text == ''
                       ? null
                       : () => Navigator.pop(context, _controller.text),

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:octopoints/model/data/team/Team.dart';
 import 'package:octopoints/model/data/team/TeamWithUsers.dart';
 import 'package:octopoints/model/data/user/User.dart';
-import 'package:octopoints/ui/card/RoundedCard.dart';
+import 'RoundedCard.dart';
 
 class TeamCard extends RoundedCard {
   final TeamWithUsers teamWithUsers;
@@ -70,6 +70,7 @@ class TeamCard extends RoundedCard {
                 decoration: InputDecoration(
                   hintText: '0',
                   hintStyle: TextStyle(color: Colors.black),
+                  border: InputBorder.none,
                 ),
               ),
             ),

@@ -17,8 +17,17 @@ abstract class RoundedCard extends StatelessWidget {
       child: Container(
         margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
         decoration: BoxDecoration(
-            color: ColorPalette.getColor(),
-            borderRadius: BorderRadius.circular(7)),
+          gradient: LinearGradient(
+            begin: Alignment.bottomCenter,
+            end: Alignment.topCenter,
+            stops: [.05, .05],
+            colors: [
+              ColorPalette.getColor(),
+              ColorPalette.getLightGrey(),
+            ],
+          ),
+          borderRadius: BorderRadius.circular(7),
+        ),
         padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -28,6 +37,7 @@ abstract class RoundedCard extends StatelessWidget {
             IconButton(
               onPressed: this.onDelete,
               icon: Icon(Icons.delete),
+              color: Colors.white,
             ),
           ],
         ),

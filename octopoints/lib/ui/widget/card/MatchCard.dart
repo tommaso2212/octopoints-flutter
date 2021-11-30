@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:octopoints/model/data/match/Match.dart';
-import 'package:octopoints/ui/card/RoundedCard.dart';
+import 'RoundedCard.dart';
 
 class MatchCard extends RoundedCard {
   final Match match;
@@ -13,8 +13,9 @@ class MatchCard extends RoundedCard {
     return Text(
       this.match.description,
       style: TextStyle(
-        color: Colors.black,
+        color: Colors.white,
         fontSize: 24,
+        fontWeight: FontWeight.bold,
       ),
     );
   }

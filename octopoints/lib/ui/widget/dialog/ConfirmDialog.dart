@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:octopoints/ui/common/ColorPalette.dart';
 
 class ConfirmDialog {
-  static Future<bool?> showConfirmDialog(BuildContext context, String title) {
+  static Future<bool?> show(BuildContext context, String title) {
     return showDialog<bool>(
       context: context,
       builder: (context) {
@@ -17,7 +17,7 @@ class ConfirmDialog {
           backgroundColor: ColorPalette.getLightGrey(),
           actions: [
             TextButton(
-              onPressed: () => Navigator.pop(context),
+              onPressed: () => Navigator.pop(context, false),
               child: Text(
                 'Annulla',
                 style: TextStyle(

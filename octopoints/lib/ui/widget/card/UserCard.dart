@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:octopoints/model/data/user/User.dart';
-import 'package:octopoints/ui/card/RoundedCard.dart';
+import 'RoundedCard.dart';
 
 class UserCard extends RoundedCard {
   final User user;
@@ -20,7 +20,6 @@ class UserCard extends RoundedCard {
           child: Text(
             this.user.username,
             style: TextStyle(
-              color: Colors.black,
               fontSize: 24,
             ),
           ),
@@ -34,12 +33,11 @@ class UserCard extends RoundedCard {
                       children: [
                         Icon(
                           Icons.keyboard_arrow_up,
-                          color: Colors.black,
+                          color: Colors.white,
                         ),
                         Text(
                           this.user.win.toString(),
                           style: TextStyle(
-                            color: Colors.black,
                             fontSize: 16,
                           ),
                         ),
@@ -52,12 +50,11 @@ class UserCard extends RoundedCard {
                       children: [
                         Icon(
                           Icons.horizontal_rule,
-                          color: Colors.black,
+                          color: Colors.white,
                         ),
                         Text(
                           this.user.draw.toString(),
                           style: TextStyle(
-                            color: Colors.black,
                             fontSize: 16,
                           ),
                         ),
@@ -70,12 +67,11 @@ class UserCard extends RoundedCard {
                       children: [
                         Icon(
                           Icons.keyboard_arrow_down,
-                          color: Colors.black,
+                          color: Colors.white,
                         ),
                         Text(
                           this.user.lose.toString(),
                           style: TextStyle(
-                            color: Colors.black,
                             fontSize: 16,
                           ),
                         ),
